@@ -1,5 +1,5 @@
 ### Setup
-Install beautiful soup and requests:
+Install requests:
 ```
 pip3 install requests
 ```
@@ -59,7 +59,7 @@ Once we have confirmed that the key can be found, we can go ahead and print the 
 # next we will attempt to find the first data member in the JSON object with the requested key or if there is none
 # display a message indicating that it was not found
 try:
-    value = find_item(response_json_object, "widgets")
+    value = find_item(response_json_object, key)
 except Exception as e:
     print(f'Error: Exception thrown when attempting to find widgets key in JSON object')
 
@@ -71,7 +71,3 @@ else:
     print(f'{str(value)}')
 
 ```
-
-
-### Widgets value
-The value for the key 'widgets' seems to be an array so keep that in mind. 
